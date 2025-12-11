@@ -1,5 +1,3 @@
-PHP_Laravel12_Convert_Json_To_Array
--------------------------------------------------------
 # PHP_Laravel12_Convert_Json_To_Array
 
 A complete Laravel 12 application demonstrating multiple methods for converting JSON data into PHP arrays using Laravel features, PHP functions, and HTTP API responses.
@@ -49,6 +47,17 @@ This project includes:
 - GuzzleHTTP (Laravel provides it by default)
 
 ---
+
+## Images
+
+<img width="1783" height="972" alt="image" src="https://github.com/user-attachments/assets/2ac71f9f-eaa5-4841-a23e-65c3079f2985" />
+
+<img width="1764" height="702" alt="image" src="https://github.com/user-attachments/assets/35e42021-ded5-45d4-9292-3b4cbb657c43" />
+
+<img width="1759" height="888" alt="image" src="https://github.com/user-attachments/assets/95e02bd9-67d8-4e16-9580-1fe056ab627a" />
+
+
+
 
 ## Installation
 
@@ -190,5 +199,6 @@ Prefer Http::get()->json() for API responses
 Use Collections for filtering and transformation
 
 Wrap API calls inside try/catch
+
 
 Use json_last_error_msg() to debug JSON issues
