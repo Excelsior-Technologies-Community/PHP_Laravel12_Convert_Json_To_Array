@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\JsonTransformerController;
+use App\Http\Controllers\JsonSourceSeederController;
+use App\Http\Controllers\JsonConverterMockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,3 +62,34 @@ Route::post('/json-export', [DemoController::class, 'exportJson'])
 
 Route::post('/csv-export', [DemoController::class, 'exportCsv'])
     ->name('csv.export');
+
+/*
+|--------------------------------------------------------------------------
+| Module 1: Dynamic Nested JSON Dot-Notation Transformer & Schema Builder
+|--------------------------------------------------------------------------
+*/
+Route::get('/json-transformer', [JsonTransformerController::class, 'index'])->name('json.transformer');
+Route::post('/json-transformer/flatten', [JsonTransformerController::class, 'processFlatten'])->name('json.transformer.flatten');
+Route::post('/json-transformer/mapper', [JsonTransformerController::class, 'processKeyMapper'])->name('json.transformer.mapper');
+Route::post('/json-transformer/schema', [JsonTransformerController::class, 'processSchemaGenerator'])->name('json.transformer.schema');
+
+/*
+|--------------------------------------------------------------------------
+| Module 2: Multi-Source JSON Parser, URL Fetcher & Database Seeder Studio
+|--------------------------------------------------------------------------
+*/
+Route::get('/json-seeder', [JsonSourceSeederController::class, 'index'])->name('json.seeder');
+Route::post('/json-seeder/fetch', [JsonSourceSeederController::class, 'fetchUrl'])->name('json.seeder.fetch');
+Route::post('/json-seeder/upload', [JsonSourceSeederController::class, 'uploadFile'])->name('json.seeder.upload');
+Route::post('/json-seeder/generate', [JsonSourceSeederController::class, 'generateSeeder'])->name('json.seeder.generate');
+
+/*
+|--------------------------------------------------------------------------
+| Module 3: Multi-Format Converter & Mock API Response Studio
+|--------------------------------------------------------------------------
+*/
+Route::get('/json-converter', [JsonConverterMockController::class, 'index'])->name('json.converter');
+Route::post('/json-converter/convert', [JsonConverterMockController::class, 'convertFormat'])->name('json.converter.convert');
+Route::post('/json-converter/mock', [JsonConverterMockController::class, 'simulateApi'])->name('json.converter.mock');
+Route::post('/json-converter/aggregate', [JsonConverterMockController::class, 'processAggregation'])->name('json.converter.aggregate');
+

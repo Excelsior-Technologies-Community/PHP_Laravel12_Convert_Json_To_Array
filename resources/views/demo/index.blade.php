@@ -449,14 +449,74 @@
                         Open Collection Explorer
                     </a>
 
+        {{-- ================================================= --}}
+        {{-- MODULE 1: TRANSFORMER & SCHEMA BUILDER --}}
+        {{-- ================================================= --}}
+        <div class="col-md-4 mb-4">
+            <div class="card example-card h-100 border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">1. Transformer & Schema</h5>
                 </div>
-
+                <div class="card-body">
+                    <p class="card-text">Flatten deep JSON dot-notation paths, interactively rename array keys, and auto-generate Draft 7 JSON Schemas.</p>
+                    <ul>
+                        <li>Dot Notation Path Flattener</li>
+                        <li>Interactive Array Key Mapper</li>
+                        <li>Auto JSON Schema Generator</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ route('json.transformer') }}" class="btn btn-primary w-100 fw-bold">Open Transformer Studio</a>
+                </div>
             </div>
-
         </div>
 
+        {{-- ================================================= --}}
+        {{-- MODULE 2: REMOTE URL & SEEDER STUDIO --}}
+        {{-- ================================================= --}}
+        <div class="col-md-4 mb-4">
+            <div class="card example-card h-100 border-success">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">2. URL & Seeder Studio</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Fetch remote API JSON data via HTTP client, benchmark uploaded `.json` files with memory profiling, and generate DB Seeders.</p>
+                    <ul>
+                        <li>Remote API Endpoint Fetcher</li>
+                        <li>File Upload RAM & Speed Profiler</li>
+                        <li>1-Click Database Seeder Generator</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ route('json.seeder') }}" class="btn btn-success w-100 fw-bold">Open Seeder Studio</a>
+                </div>
+            </div>
+        </div>
+
+        {{-- ================================================= --}}
+        {{-- MODULE 3: CONVERTER & MOCK API STUDIO --}}
+        {{-- ================================================= --}}
+        <div class="col-md-4 mb-4">
+            <div class="card example-card h-100 border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0">3. Converter & Mock API</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Convert JSON into native PHP array code, XML & YAML, simulate REST API endpoints, and calculate array aggregations.</p>
+                    <ul>
+                        <li>JSON ⇄ PHP, XML & YAML Converter</li>
+                        <li>Mock API Endpoint Simulator</li>
+                        <li>Array Aggregator & Group By Radar</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ route('json.converter') }}" class="btn btn-warning text-dark w-100 fw-bold">Open Converter Studio</a>
+                </div>
+            </div>
+        </div>
 
     </div>
+
 
 
     {{-- ================================================= --}}
